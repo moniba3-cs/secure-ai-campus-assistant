@@ -6,8 +6,9 @@ import time
 LOG_DIR = os.path.join(os.path.dirname(__file__), "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
+# Fictional records for demonstrating the simulated grade lookup tool.
 GRADES = {
-    "S1001": "S1001 (Alice): ICT302=71, ICT103=65",
+    "S1001": "S1001 (Monibah): ICT302=71, ICT103=65",
     "S1002": "S1002 (Bob): ICT302=48, ICT103=52",
     "S1003": "S1003 (Sara): ICT302=88, ICT103=79",
 }

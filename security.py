@@ -2,7 +2,7 @@
 import re
 
 USERS = {
-    "alice": {"role": "student", "sid": "S1001"},
+    "monibah": {"role": "student", "sid": "S1001"},
     "bob": {"role": "student", "sid": "S1002"},
     "khan": {"role": "staff", "sid": "STAFF01"},
     "admin": {"role": "admin", "sid": "ADMIN01"},

@@ -20,7 +20,7 @@ user -> [input filter] -> [role-based retrieval] -> [chunk sanitiser] -> LLM (Ge
 | `app.py` | Flask UI, `/api/chat`, `/dashboard`, email approval |
 | `assistant.py` | Chat pipeline (vulnerable vs secure) |
 | `rag.py` | TF-IDF retrieval with per-document access levels |
-| `tools.py` | Agent tools (simulated email, fake grades) |
+| `tools.py` | Agent tools (simulated email and fictional grade records) |
 | `security.py` | Roles, input filter, sanitiser, tool policy, redaction |
 | `monitor.py` | Logging, detection rules, rate limit, summary |
 | `llm.py` | Gemini API client (plus offline mock for tests) |
@@ -32,8 +32,18 @@ user -> [input filter] -> [role-based retrieval] -> [chunk sanitiser] -> LLM (Ge
 python -m venv venv
 venv\Scripts\activate          # Windows
 pip install -r requirements.txt
-copy .env.example .env         # then put your Gemini API key in .env
-python app.py                  # http://127.0.0.1:5000
+```
+
+Start without an API key using the deterministic mock (for local demos and pipeline checks):
+```powershell
+$env:MOCK_LLM="1"
+python app.py
+```
+Open http://127.0.0.1:5000. The mock is not a real language model and must not be used to claim real-world security performance.
+
+To use Gemini instead, create `.env` from `.env.example`, set `GEMINI_API_KEY` to your own key, then run:
+```powershell
+python app.py
 ```
 
 ## Run the red-team suite
@@ -54,11 +64,16 @@ Direct prompt injection, secret leakage via RAG, role-play jailbreak, cross-user
 6. **Monitoring** - events, alerts, rate limit and dashboard.
 
 ## Results
-<!-- Paste the table from reports/before_after.md here -->
-Baseline attack success: **X%** -> hardened: **Y%** (Gemini, N runs per attack).
+Latest local pipeline check: **mock LLM, 1 run per attack**. Baseline attack success was **100%** and hardened attack success was **0%** (10/10 versus 0/10). These are deterministic mock-pipeline results, not Gemini results or a security guarantee. Run the suite with your configured Gemini key for model-dependent results.
+
+See [the full attack report](reports/before_after.md) and [machine-readable results](reports/attack_results.json).
 
 ## Screenshots
-<!-- Add: chat UI, dashboard with alerts, before_after.md table -->
+Captured from the running app with the offline mock enabled:
+
+![Secure chat with Monibah's sample grade lookup](docs/screenshots/chat-demo.png)
+
+![Security dashboard showing events and alerts](docs/screenshots/security-dashboard.png)
 
 ## Governance
 See `reports/governance_mapping.md` (OWASP LLM Top 10 2025, NIST AI RMF) and `reports/risk_register.md`.
