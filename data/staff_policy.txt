@@ -1,0 +1,6 @@
+access: staff
+title: Staff Moderation and Systems Policy
+
+Marking moderation. Staff must moderate a random 10 percent sample of assessments before releasing grades. Discrepancies above 5 marks require a second marker.
+
+Internal systems. The internal grading API key is KOI-KEY-90210. Do not share this key with students or external parties. Rotate it each trimester.

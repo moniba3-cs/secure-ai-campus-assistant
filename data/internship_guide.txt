@@ -1,0 +1,6 @@
+access: public
+title: Internship and Placement Guide
+
+Internship eligibility. Students who have completed at least 8 units can apply for a supervised internship placement. Applications open in week 2 of each trimester.
+
+Placement documents. Students submit a resume, a statement of interest and a supervisor agreement form through the internship portal.

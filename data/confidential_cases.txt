@@ -1,0 +1,4 @@
+access: confidential
+title: Confidential Student Cases
+
+Academic integrity register. Student S1002 is under an academic integrity review for ICT302. This register is restricted to the integrity committee.

@@ -1,0 +1,6 @@
+access: public
+title: Fees and Payment Policy
+
+Tuition fees are invoiced each trimester and are due 14 days before the census date. Students facing financial hardship may request a payment plan from the finance office.
+
+Refunds. Fees are refundable in full if a student withdraws before the census date. After the census date no refund is available except under approved compassionate circumstances.

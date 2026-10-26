@@ -1,0 +1,8 @@
+access: public
+title: KOI Course Handbook
+
+Assignment extension policy. Students may apply for an assignment extension of up to 7 days through the student portal. Applications must be lodged at least 24 hours before the assignment deadline and include supporting documents.
+
+Assessment and grading. Assessments are graded on the scale HD, D, C, P and F. A pass requires at least 50 percent overall. Grades are released through the student portal after moderation.
+
+Attendance. Students are expected to attend at least 80 percent of scheduled classes. Repeated absence may trigger an at-risk review by the course coordinator.
